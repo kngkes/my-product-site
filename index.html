@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Meridian Eleven — Every hour, machined by hand.</title>
+<meta name="description" content="Meridian Eleven: a titanium field watch, hand-assembled from 87 parts.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="bar">
+  <span class="mark">MERIDIAN&nbsp;XI</span>
+  <a href="#reserve" class="bar-cta">Reserve</a>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="hero-copy">
+      <h1>Every hour,<br>machined by hand.</h1>
+      <p>A titanium field watch, hand-assembled from 87 parts in a workshop of six. No batteries. No shortcuts.</p>
+    </div>
+    <div class="dial-stage" aria-hidden="true">
+      <svg class="dial" viewBox="0 0 400 400">
+        <circle class="dial-case" cx="200" cy="200" r="170"/>
+        <circle class="dial-face" cx="200" cy="200" r="150"/>
+        <g class="dial-ticks"></g>
+        <g class="dial-hands">
+          <line class="hand hand-hour" x1="200" y1="200" x2="200" y2="115"/>
+          <line class="hand hand-min" x1="200" y1="200" x2="200" y2="80"/>
+          <line class="hand hand-sec" x1="200" y1="200" x2="200" y2="95"/>
+        </g>
+        <circle class="dial-pin" cx="200" cy="200" r="6"/>
+      </svg>
+    </div>
+    <p class="scroll-cue">Scroll to assemble</p>
+  </section>
+
+  <section class="movement">
+    <div class="movement-pin">
+      <svg class="gear-art" viewBox="0 0 400 400" aria-hidden="true">
+        <g class="gear gear-a"><circle r="70" cx="200" cy="200" class="gear-ring"/></g>
+        <g class="gear gear-b"><circle r="40" cx="290" cy="150" class="gear-ring small"/></g>
+        <g class="gear gear-c"><circle r="28" cx="120" cy="260" class="gear-ring small"/></g>
+      </svg>
+      <ol class="stage-list">
+        <li class="stage" data-stage="0">
+          <span class="stage-no">01</span>
+          <div>
+            <h3>The case</h3>
+            <p>Grade 5 titanium, milled from solid bar stock and hand-brushed against the grain.</p>
+          </div>
+        </li>
+        <li class="stage" data-stage="1">
+          <span class="stage-no">02</span>
+          <div>
+            <h3>The movement</h3>
+            <p>A 21-jewel automatic caliber, regulated over six days before it earns its case.</p>
+          </div>
+        </li>
+        <li class="stage" data-stage="2">
+          <span class="stage-no">03</span>
+          <div>
+            <h3>The crystal</h3>
+            <p>Domed sapphire, anti-reflective on both faces, rated to 200 meters.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="specs">
+    <h2>Specification</h2>
+    <dl class="spec-list">
+      <div class="spec-row"><dt>Case</dt><dd>Grade 5 titanium, 39mm</dd></div>
+      <div class="spec-row"><dt>Movement</dt><dd>Automatic, 21 jewels, 42hr reserve</dd></div>
+      <div class="spec-row"><dt>Crystal</dt><dd>Domed sapphire, AR coated</dd></div>
+      <div class="spec-row"><dt>Water resistance</dt><dd>200m</dd></div>
+      <div class="spec-row"><dt>Strap</dt><dd>Vegetable-tanned leather or titanium bracelet</dd></div>
+      <div class="spec-row"><dt>Assembly</dt><dd>By hand, Sheffield, England</dd></div>
+    </dl>
+  </section>
+
+  <section class="cta" id="reserve">
+    <h2>Reserve yours</h2>
+    <p>200 pieces this run. Delivery in November.</p>
+    <a class="cta-button" href="#">Reserve — £1,450</a>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <span>Meridian Eleven</span>
+  <span>Sheffield, England</span>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

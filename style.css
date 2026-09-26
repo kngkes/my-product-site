@@ -1,0 +1,160 @@
+:root{
+  --bg:#15140F;
+  --surface:#1D1C15;
+  --ink:#F1EDE2;
+  --ink-dim:#9C9587;
+  --brass:#B9924C;
+  --line:#38352A;
+  --safe-t:env(safe-area-inset-top,0px);
+  --safe-b:env(safe-area-inset-bottom,0px);
+}
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;scroll-padding-top:var(--safe-t);}
+html,body{height:100%;}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:'Inter',system-ui,sans-serif;
+  line-height:1.55;
+  padding-top:var(--safe-t);
+  padding-bottom:var(--safe-b);
+  overflow-x:hidden;
+}
+h1,h2,h3{
+  font-family:'Fraunces',Georgia,serif;
+  font-weight:500;
+  line-height:1.08;
+  margin:0;
+}
+p{margin:0;color:var(--ink-dim);max-width:34ch;}
+a{color:inherit;}
+
+.bar{
+  position:fixed;top:0;left:0;right:0;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:1.1rem 1.25rem calc(1.1rem);
+  padding-top:calc(1.1rem + var(--safe-t));
+  z-index:10;
+  background:linear-gradient(var(--bg) 60%, transparent);
+}
+.mark{font-size:.8rem;letter-spacing:.14em;color:var(--ink-dim);}
+.bar-cta{
+  font-size:.85rem;
+  text-decoration:none;
+  border:1px solid var(--brass);
+  color:var(--brass);
+  padding:.45rem .9rem;
+  border-radius:2px;
+}
+
+.hero{
+  min-height:100svh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  padding:6rem 1.5rem 3rem;
+  text-align:center;
+  position:relative;
+}
+.hero-copy h1{font-size:clamp(2rem,7vw,3rem);}
+.hero-copy p{margin:1rem auto 0;font-size:1.02rem;}
+.dial-stage{width:min(72vw,280px);margin:2.5rem auto 0;}
+.dial{width:100%;height:auto;overflow:visible;}
+.dial-case{fill:none;stroke:var(--line);stroke-width:3;}
+.dial-face{fill:var(--surface);stroke:var(--brass);stroke-width:1.5;}
+.hand{stroke:var(--ink);stroke-width:4;stroke-linecap:round;transform-origin:200px 200px;}
+.hand-sec{stroke:var(--brass);stroke-width:2;}
+.dial-pin{fill:var(--brass);}
+.scroll-cue{
+  position:absolute;bottom:1.5rem;
+  font-size:.72rem;letter-spacing:.08em;color:var(--ink-dim);
+}
+
+.movement{position:relative;}
+.movement-pin{
+  min-height:100svh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:2.5rem;
+  padding:4rem 1.5rem;
+  max-width:640px;margin:0 auto;
+}
+.gear-art{width:min(50vw,180px);align-self:center;overflow:visible;}
+.gear-ring{fill:none;stroke:var(--line);stroke-width:2;}
+.gear-ring.small{stroke:var(--brass);opacity:.5;}
+.gear{transform-origin:center;}
+
+.stage-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:1.75rem;}
+.stage{
+  display:flex;gap:1.1rem;
+  border-top:1px solid var(--line);
+  padding-top:1.1rem;
+  opacity:.28;
+  transition:opacity .3s ease;
+}
+.stage.is-active{opacity:1;}
+.stage-no{
+  font-family:'Fraunces',serif;
+  color:var(--brass);
+  font-size:1rem;
+  flex-shrink:0;
+  padding-top:.1rem;
+}
+.stage h3{font-size:1.15rem;margin-bottom:.35rem;}
+.stage p{max-width:38ch;font-size:.95rem;}
+
+.specs{padding:5rem 1.5rem 4rem;max-width:640px;margin:0 auto;}
+.specs h2{font-size:1.6rem;margin-bottom:2rem;}
+.spec-list{margin:0;}
+.spec-row{
+  display:flex;justify-content:space-between;gap:1rem;
+  padding:.85rem 0;
+  border-top:1px solid var(--line);
+  font-size:.95rem;
+}
+.spec-row:last-child{border-bottom:1px solid var(--line);}
+.spec-row dt{color:var(--ink-dim);}
+.spec-row dd{margin:0;text-align:right;}
+
+.cta{
+  padding:5rem 1.5rem 6rem;
+  text-align:center;
+  max-width:480px;margin:0 auto;
+}
+.cta h2{font-size:1.8rem;margin-bottom:.6rem;}
+.cta p{margin:0 auto 1.75rem;}
+.cta-button{
+  display:inline-block;
+  text-decoration:none;
+  background:var(--brass);
+  color:var(--bg);
+  font-weight:600;
+  padding:.9rem 1.8rem;
+  border-radius:2px;
+  font-size:.95rem;
+}
+
+.foot{
+  display:flex;justify-content:space-between;
+  padding:1.5rem 1.5rem calc(1.5rem + var(--safe-b));
+  border-top:1px solid var(--line);
+  font-size:.78rem;color:var(--ink-dim);
+}
+
+a:focus-visible, .stage:focus-visible{
+  outline:2px solid var(--brass);
+  outline-offset:3px;
+}
+
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+}
+
+@media (min-width:720px){
+  .movement-pin{flex-direction:row;align-items:center;text-align:left;gap:4rem;}
+  .gear-art{width:220px;flex-shrink:0;}
+}
